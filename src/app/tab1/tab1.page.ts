@@ -27,6 +27,7 @@ export class Tab1Page implements OnInit, OnDestroy {
   
   ionViewWillLeave() {
     console.log('Tab1Page ionViewWillLeave');
+    //update my cart
   }
 
   ionViewDidLeave() {
@@ -41,9 +42,10 @@ export class Tab1Page implements OnInit, OnDestroy {
       }
     };
    /* 
-    this.router.navigate (['/tabs/items/' + this.id], navData)
-    this.navCtrl.navigateForward('/tabs/items/' + this.redirect,navData);*/
-    this.navCtrl.navigateForward('/tabs/items/' + this.id, navData);
+   this.navCtrl.navigateForward('/tabs/items/' + this.redirect,navData);*/
+   //this.navCtrl.navigateForward('/tabs/items/' + this.id, navData);
+   this.router.navigate(['/','tabs','tab1','item']);
+    
   }
   ngOnDestroy(): void {
       console.log('Tab1Page ngOnDestroy')

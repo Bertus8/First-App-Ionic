@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>item</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+   <app-product 
+   *ngFor="let item of items"
+   [item]="item"
+   [routerLink]="['/', 'tabs', 'tab1', 'item', item.id]"
+   >
+  </app-product>
+
+
+
+
+</ion-content>

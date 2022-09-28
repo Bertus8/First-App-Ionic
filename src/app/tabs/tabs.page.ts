@@ -9,4 +9,12 @@ export class TabsPage {
 
   constructor() {}
 
+  ionViewWillLeave(){
+    console.log('TabsPage ionViewWillLeave')
+  }
+
+  ionViewDidLeave(){
+    console.log('TabsPage ionViewDidLeave')
+  }
+  
 }

@@ -19,8 +19,8 @@ export class SingleItemPage implements OnInit, OnDestroy {
     const data = this.route.snapshot.queryParams;
     console.log('queryparams: ',data)
     if(data?.data) {
-      const currentObjectData = JSON.parse
-      console.log(JSON.parse(data.data));
+      const currentObjectData = JSON.parse(data.data)
+      console.log(currentObjectData.name);
     }
   }
 
