@@ -14,7 +14,35 @@ export class ItemPage implements OnInit {
 
   ngOnInit() {
     console.log('ngOnInit');
-    this.items = this.apiService.getItems();
+    // this.items = this.apiService.getItems();
+    this.getData();
+  }
+
+  /*async getData() {
+    this.items = await this.apiService.getItems();
+    console.log('items value:', this.items);
+  } catch(e) {
+    console.log(e);
+  }
+
+   /*this.apiService.getItems().then(data => {
+    console.log('items:', data);
+    this.items = data;
+   }).catch(err => {
+    console.log('error:',err);
+   });
+  }*/
+  getData(){
+    this.apiService.getItems().then(data => {
+      console.log('items: ', data);
+    this.apiService.checkTotal(data).then(val => {
+      console.log(val);
+      if(val){
+        this.items = data;
+        
+      }
+    })
+    })
   }
 
   ionViewWillEnter() {
